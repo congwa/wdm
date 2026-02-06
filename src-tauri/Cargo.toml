@@ -1,0 +1,36 @@
+[package]
+name = "windsurf-data-manager"
+version = "0.3.0"
+description = "Windsurf Data Manager - 管理 Windsurf 编辑器本地数据"
+authors = ["you"]
+edition = "2021"
+default-run = "windsurf-data-manager"
+
+[lib]
+name = "windsurf_data_manager_lib"
+crate-type = ["lib", "cdylib", "staticlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon"] }
+tauri-plugin-opener = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rusqlite = { version = "0.32", features = ["bundled"] }
+walkdir = "2"
+dirs = "6"
+glob = "0.3"
+regex = "1"
+reqwest = { version = "0.13.1", features = ["blocking", "json"] }
+tauri-plugin-dialog = "2.6.0"
+base64 = "0.22"
+tokio = { version = "1", features = ["rt"] }
+
+[profile.release]
+panic = "abort"
+codegen-units = 1
+lto = true
+opt-level = "s"
+strip = true

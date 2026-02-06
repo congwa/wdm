@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc"/>
+      <stop offset="100%" style="stop-color:#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="wGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b"/>
+      <stop offset="100%" style="stop-color:#334155"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#6366f1"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="20" flood-color="#00000022"/>
+    </filter>
+  </defs>
+  <!-- Transparent background - nothing here -->
+  <!-- Card body with shadow -->
+  <rect x="80" y="80" width="864" height="864" rx="190" ry="190" fill="url(#card)" filter="url(#shadow)"/>
+  <!-- Subtle inner border -->
+  <rect x="82" y="82" width="860" height="860" rx="188" ry="188" fill="none" stroke="#cbd5e1" stroke-width="2"/>
+  <!-- W letter -->
+  <text x="512" y="540" font-family="-apple-system, 'SF Pro Display', 'Helvetica Neue', sans-serif" font-size="480" font-weight="800" fill="url(#wGrad)" text-anchor="middle" dominant-baseline="central">W</text>
+  <!-- Accent bar -->
+  <rect x="310" y="730" width="404" height="36" rx="18" fill="url(#bar)"/>
+</svg>
